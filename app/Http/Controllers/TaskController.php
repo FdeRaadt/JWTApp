@@ -1,6 +1,5 @@
 <?php
 
-
 namespace App\Http\Controllers;
 
 use JWTAuth;
@@ -9,7 +8,7 @@ use Illuminate\Http\Request;
 
 class TaskController extends Controller
 {
-     /**
+    /**
      * @var
      */
     protected $user;
@@ -22,22 +21,21 @@ class TaskController extends Controller
         $this->user = JWTAuth::parseToken()->authenticate();
     }
 
+
     /**
      * @return mixed
      */
-
     public function index()
     {
-        // get all tasks for a user and convert them to an array.
         $tasks = $this->user->tasks()->get(['title', 'description'])->toArray();
 
         return $tasks;
     }
 
-        /**
-         * @param $id
-         * @return \Illuminate\Http\JsonResponse
-        */
+    /**
+     * @param $id
+     * @return \Illuminate\Http\JsonResponse
+    */
     public function show($id)
     {
         $task = $this->user->tasks()->find($id);

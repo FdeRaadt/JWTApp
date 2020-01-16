@@ -7,7 +7,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Tymon\JWTAuth\Contracts\JWTSubject;
 
-class User extends Authenticatable
+class User extends Authenticatable implements JWTSubject
 {
     use Notifiable;
 
@@ -58,18 +58,8 @@ class User extends Authenticatable
         return [];
     }
 
-    /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
-     * 
-     * it seems that a Task can have more than 1 task
-     * 
-     */
     public function tasks()
-
-    {
-        return $this->hasMany(Task::class);
-    }
-
-
-
+{
+    return $this->hasMany(Task::class);
+}
 }
