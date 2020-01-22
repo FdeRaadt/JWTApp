@@ -1,1 +1,17 @@
-//
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+//  dark background
+html, body {
+  background-color: #24292e;
+  color: hsla(0,0%,100%,.7);
+  font-family: 'Nunito', sans-serif;
+  font-weight: 200;
+  height: 100vh;
+  margin: 0 auto;
+}
+
+.card {
+  background-color: rgb(49, 54, 63);
+  color: hsla(0,0%,100%,.7);
+}

@@ -1,0 +1,15 @@
+@import url(https://fonts.googleapis.com/css?family=Nunito);html,
+body {
+  background-color: #24292e;
+  color: rgba(255, 255, 255, 0.7);
+  font-family: "Nunito", sans-serif;
+  font-weight: 200;
+  height: 100vh;
+  margin: 0 auto;
+}
+
+.card {
+  background-color: #31363f;
+  color: rgba(255, 255, 255, 0.7);
+}
+

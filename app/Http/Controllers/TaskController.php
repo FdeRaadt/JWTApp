@@ -27,9 +27,13 @@ class TaskController extends Controller
      */
     public function index()
     {
-        $tasks = $this->user->tasks()->get(['title', 'description'])->toArray();
+        // jwt way
+        // $tasks = $this->user->tasks()->get(['title', 'description'])->toArray();
 
-        return $tasks;
+        // return $tasks;
+
+        $tasks = Task::all()->toArray();
+        return array($tasks);
     }
 
     /**

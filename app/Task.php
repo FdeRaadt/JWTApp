@@ -15,4 +15,6 @@ class Task extends Model
      * @var array
      */
     protected $guarded = [];
+
+    protected $fillable = ['title', 'description'];
 }
